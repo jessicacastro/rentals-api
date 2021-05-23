@@ -4,5 +4,9 @@
   "host": "localhost",
   "username": "rentalsAdmin",
   "password": "ignite",
-  "database": "rentalsDatabase"
+  "database": "rentalsDatabase",
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
