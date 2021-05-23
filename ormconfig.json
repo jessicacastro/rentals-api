@@ -1,0 +1,8 @@
+{
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "rentalsAdmin",
+  "password": "ignite",
+  "database": "rentalsDatabase"
+}
