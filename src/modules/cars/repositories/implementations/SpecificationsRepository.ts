@@ -1,4 +1,4 @@
-import { Category } from '../../model/Category'
+import { Category } from '../../entities/Category'
 import { ISpecificationsRepository, ISpecificationsDTO } from './ISpecificationsRepository';
 
 class SpecificationsRepository implements ISpecificationsRepository {
