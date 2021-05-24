@@ -5,6 +5,8 @@
   "username": "rentalsAdmin",
   "password": "ignite",
   "database": "rentalsDatabase",
+  "syncronize": true,
+  "entities": ["./src/modules/**/entities/*.ts"],
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"

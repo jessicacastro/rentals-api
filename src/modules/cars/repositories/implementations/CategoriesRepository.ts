@@ -7,19 +7,19 @@ class CategoriesRepository implements ICategoriesRepository {
 
   private repository: Repository<Category>;
 
-  private static INSTANCE: CategoriesRepository;
+  // private static INSTANCE: CategoriesRepository;
 
-  private constructor() {
+  constructor() {
      this.repository = getRepository(Category);
   };
 
-  public static getInstance(): CategoriesRepository {
-    if (!CategoriesRepository.INSTANCE) {
-      CategoriesRepository.INSTANCE = new CategoriesRepository();
-    }
+  // public static getInstance(): CategoriesRepository {
+  //   if (!CategoriesRepository.INSTANCE) {
+  //     CategoriesRepository.INSTANCE = new CategoriesRepository();
+  //   }
 
-    return CategoriesRepository.INSTANCE;
-  }
+  //   return CategoriesRepository.INSTANCE;
+  // }
 
   async findByName(name: string): Promise<Category> {
     const category = await this.repository.findOne({name});
