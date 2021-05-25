@@ -1,4 +1,5 @@
-import { ISpecificationsRepository } from "../../repositories/implementations/ISpecificationsRepository";
+import { inject, injectable } from "tsyringe";
+import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
 interface IRequest {
   name: string;
@@ -9,8 +10,11 @@ interface IRequest {
  * @param specificationsRepository
  * Serviço responsável por chamar o repositório e rodar seus métodos para criar a specification.
  */
+
+@injectable()
 class CreateSpecificationsUseCase {
   constructor(
+    @inject("SpecificationsRepository")
     private specificationsRepository: ISpecificationsRepository
   ) {};
 

@@ -1,39 +1,30 @@
-import { Category } from '../../entities/Category'
-import { ISpecificationsRepository, ISpecificationsDTO } from './ISpecificationsRepository';
+import { getRepository, Repository } from 'typeorm';
+import { Specification } from '../../entities/Specification'
+import { ISpecificationsRepository, ISpecificationsDTO } from '../ISpecificationsRepository';
 
 class SpecificationsRepository implements ISpecificationsRepository {
-  private specifications: Category[];
-
-  private static INSTANCE: SpecificationsRepository;
+  private repository: Repository<Specification>;
 
   private constructor() {
-    this.specifications = [];
+    this.repository = getRepository(Specification);
   };
 
-  public static getInstance(): SpecificationsRepository {
-    if (!SpecificationsRepository.INSTANCE) {
-      SpecificationsRepository.INSTANCE = new SpecificationsRepository();
-    }
+  async findByName(name: string): Promise<Specification> {
+    const repository = await this.repository.findOne({ name });
 
-    return SpecificationsRepository.INSTANCE;
+    return repository;
   }
 
-  findByName(name: string): Category {
-    const category = this.specifications.find((category) =>  category.name === name);
+  async create({ name, description }: ISpecificationsDTO): Promise<void> {
+    const specification = this.repository.create({ name, description });
 
-    return category;
-  }
-
-  create({ name, description }: ISpecificationsDTO): void {
-    const category = new Category();
-
-    Object.assign(category, { name, description });
-
-    this.specifications.push(category);
+    await this.repository.save(specification);
   };
 
-  listAll(): Category[] {
-    return this.specifications;
+  async listAll(): Promise<Specification[]> {
+    const specifications = await this.repository.find();
+
+    return specifications;
   }
 };
 
