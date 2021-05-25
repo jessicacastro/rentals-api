@@ -18,12 +18,12 @@ class CreateSpecificationsUseCase {
     private specificationsRepository: ISpecificationsRepository
   ) {};
 
-  execute({ name, description }: IRequest): void {
-    const checkIfSpecificationsExists = this.specificationsRepository.findByName(name);
+  async execute({ name, description }: IRequest): Promise<void> {
+    const checkIfSpecificationsExists = await this.specificationsRepository.findByName(name);
 
     if (checkIfSpecificationsExists) throw new Error('Specification alread exists!');
 
-    this.specificationsRepository.create({ name, description });
+    await this.specificationsRepository.create({ name, description });
   }
 };
 
