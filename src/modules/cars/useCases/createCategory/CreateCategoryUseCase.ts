@@ -1,3 +1,5 @@
+import { inject, injectable } from 'tsyringe';
+import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository';
 import { ICategoriesRepository } from "../../repositories/implementations/ICategoriesRepository";
 
 interface IRequest {
@@ -9,8 +11,10 @@ interface IRequest {
  * @param categoriesRepository
  * Serviço responsável por chamar o repositório e rodar seus métodos para criar a category.
  */
+@injectable()
 class CreateCategoryUseCase {
   constructor(
+    @inject("CategoriesRepository")
     private categoriesRepository: ICategoriesRepository
   ) {};
 
