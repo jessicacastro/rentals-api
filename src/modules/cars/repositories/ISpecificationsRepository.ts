@@ -1,4 +1,4 @@
-import { Category } from "../entities/Category";
+import { Specification } from "../entities/Specification";
 
 //DTO - Data Transfer Object
 interface ISpecificationsDTO {
@@ -7,8 +7,8 @@ interface ISpecificationsDTO {
 }
 
 interface ISpecificationsRepository {
-  findByName(name: string): Promise<Category>;
-  listAll(): Promise<Category[]>;
+  findByName(name: string): Promise<Specification>;
+  listAll(): Promise<Specification[]>;
   create({ name, description }: ISpecificationsDTO): Promise<void>;
 }
 
