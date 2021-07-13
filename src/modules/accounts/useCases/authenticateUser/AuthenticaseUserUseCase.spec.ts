@@ -1,6 +1,6 @@
-import { AppError } from "../../../../error/AppError";
-import { ICreateUserDTO } from "../../dtos/ICreateUsersDTO";
-import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory";
+import { AppError } from "@error/AppError";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUsersDTO";
+import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 
@@ -46,6 +46,8 @@ describe("AuthenticateUserUseCase", () => {
         password: "1234",
         name: "User Test"
       }
+
+
 
       await createUserUseCase.execute(user);
 
