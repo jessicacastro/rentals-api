@@ -4,7 +4,7 @@
 
 <p align="center">Here, all the requirements that were considered for building the API will be listed.</p>
 
-<center>
+<div align="center">
 
 | Legends | Meaning |
 |:-------:|:-------:|
@@ -12,7 +12,7 @@
 |**RNF**   | Not-Functional Requirements |
 |**RN**   | Business Rules |
 
-</center>
+</div>
 
 <br>
 <br>
