@@ -20,33 +20,12 @@
 
 <p align="center">
   Keep track of your car rental in a simple way.
-  <br>
+  <br />
+</p>
+
+<p align="center">
+  To check the application requirements, [click here](rentals-api/tree/master/docs/REQUIREMENTS.md)
+  <br />
 </p>
 
 
-#### Legends
-**RF** => Functional Requirements
-
-**RNF** => Non-Functional Requirements
-
-**RN** => Business Rules
-
-## Car Registration
-
-**RF**
-
-1. Must be possible to register a car.
-
-**RN**
-
-1. Must not be possible to register a car with an existing license plate.
-2. Must not be possible to change the license plate of an already registered car.
-3. The car must be registered as "available" by default.
-4. Must not be possible to register a car without an admin user.
-
-## Car Listing
-
-**RF**
-1. Must be possible to list all the available cars.
-
-**RN**
