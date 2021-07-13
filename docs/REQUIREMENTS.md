@@ -2,13 +2,17 @@
  <img src="../assets/rentals_api_requirements_cover.png" alt="Project logo">
 </p>
 
-Here, all the requirements that were considered for building the API will be listed.
+<p align="center">Here, all the requirements that were considered for building the API will be listed.</p>
+
+<center>
 
 | Legends | Meaning |
-|---------|---------|
+|:-------:|:-------:|
 |**RF**   | Functional Requirements |
 |**RNF**   | Not-Functional Requirements |
 |**RN**   | Business Rules |
+
+</center>
 
 <br>
 <br>
@@ -18,7 +22,7 @@ Requirements for car registration, listing and registration of car specification
 <br>
 <br>
 
-## Car Registration
+### Car Registration
 
 **RF**
 
@@ -32,7 +36,7 @@ Requirements for car registration, listing and registration of car specification
 - [ ] The car must be registered as "available" by default.
 - [ ] Must not be possible to register a car without an admin user.
 
-## Car Listing
+### Car Listing
 
 **RF**
 - [ ] Must be possible to list all the available cars.
@@ -43,7 +47,7 @@ Requirements for car registration, listing and registration of car specification
 - [ ] A user does not need to be logged in to view the listing.
 
 
-## Car Specifications Registration
+### Car Specifications Registration
 
 **RF**
 - [ ] Must be possible to register a car specification.
