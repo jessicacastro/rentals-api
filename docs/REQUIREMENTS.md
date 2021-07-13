@@ -60,3 +60,29 @@ Requirements for car registration, listing and registration of car specification
 - [ ] Must not be possible to register an existent car specification.
 - [ ] Must be possible to register more than one car specification.
 - [ ] Must not be possible to register a car without an admin user.
+
+### Car Image Registration
+
+**RF**
+- [ ] Must be possible to register a car image.
+- [ ] Must be possible to list all the cars, availables or not.
+
+**RNF**
+- [ ] Multer must be used to upload files.
+
+**RN**
+- [ ] Must not be possible to register a car without an admin user.
+- [ ] Must be possible to register more than one image for the car.
+- [ ] Must not be possible to register an image for a non-existent car.
+
+### Car Rental
+
+**RF**
+- [ ] Must be possible to register a car rental.
+
+**RN**
+
+- [ ] Must be possible to rent with a minimum time of 24 hours.
+- [ ] Must not be possible to register a new lease for a user who has an open lease.
+- [ ] Must not be possible to register a new rental for a car that is already rented.
+- [ ] Must not be possible to register a rental for a date prior to the time of rental.
