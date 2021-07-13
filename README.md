@@ -23,4 +23,4 @@
 
 ---
 
-To check the application requirements, [click here!](../blob/master/docs/REQUIREMENTS)
+To check the application requirements, [click here!](../blob/main/docs/REQUIREMENTS)
