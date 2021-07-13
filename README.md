@@ -16,16 +16,11 @@
 ![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fjessicacastro%2Frentals-api)
 </div>
 
----
-
 <p align="center">
   Keep track of your car rental in a simple way.
   <br />
 </p>
 
-<p align="center">
-  To check the application requirements, [click here](rentals-api/tree/master/docs/REQUIREMENTS.md)
-  <br />
-</p>
+---
 
-
+To check the application requirements, [click here!](../blob/master/docs/REQUIREMENTS)
